@@ -23,54 +23,54 @@ import javafx.scene.control.TextField;
 // */
 public class InventoryFormController implements Initializable {
 
-    
-    @FXML
-    private TextField id;  
-    @FXML
-    private TextField description;
-
-    @FXML
-    private TextField qty;
-
-    @FXML
-    private TextField purchasePrice;
-
-    @FXML
-    private TextField RetailPrice;
-
-    @FXML
-    private TextField name;
-
-    @FXML
-    private TextField date;
-
-    @FXML
-    private TextField outletId;
-
-    @FXML
-    private Button submitInventory;
+//    
+//    @FXML
+//    private TextField id;  
+//    @FXML
+//    private TextField description;
+//
+//    @FXML
+//    private TextField qty;
+//
+//    @FXML
+//    private TextField purchasePrice;
+//
+//    @FXML
+//    private TextField RetailPrice;
+//
+//    @FXML
+//    private TextField name;
+//
+//    @FXML
+//    private TextField date;
+//
+//    @FXML
+//    private TextField outletId;
+//
+//    @FXML
+//    private Button submitInventory;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    InventoryItem itemToAdd = new InventoryItem(Long.parseLong(id.getText()),name.toString(),description.toString(), Long.parseLong(qty.getText()),Double.parseDouble(purchasePrice.getText()),Double.parseDouble(RetailPrice.getText()),date.toString(),Long.parseLong(outletId.getText()));  
-
-     submitInventory.setOnAction(e -> {
-               try {
-    if (id == null)
-    {InventoryItem.addOne(itemToAdd);
-    System.out.println("invent to add");
-    }
-    else
-    {        InventoryItem.updateOne(itemToAdd);
-   System.out.println("invent to update");
-    }                          
-               } catch (SQLException ex) {
-                   Logger.getLogger(InventoryFormController.class.getName()).log(Level.SEVERE, null, ex);
-               } catch (ClassNotFoundException ex) {
-                   Logger.getLogger(InventoryFormController.class.getName()).log(Level.SEVERE, null, ex);
-               }
-           });
-    
+//    InventoryItem itemToAdd = new InventoryItem(Long.parseLong(id.getText()),name.toString(),description.toString(), Long.parseLong(qty.getText()),Double.parseDouble(purchasePrice.getText()),Double.parseDouble(RetailPrice.getText()),date.toString(),Long.parseLong(outletId.getText()));  
+//
+//     submitInventory.setOnAction(e -> {
+//               try {
+//    if (id == null)
+//    {InventoryItem.addOne(itemToAdd);
+//    System.out.println("invent to add");
+//    }
+//    else
+//    {        InventoryItem.updateOne(itemToAdd);
+//   System.out.println("invent to update");
+//    }                          
+//               } catch (SQLException ex) {
+//                   Logger.getLogger(InventoryFormController.class.getName()).log(Level.SEVERE, null, ex);
+//               } catch (ClassNotFoundException ex) {
+//                   Logger.getLogger(InventoryFormController.class.getName()).log(Level.SEVERE, null, ex);
+//               }
+//           });
+//    
     }    
    
 }

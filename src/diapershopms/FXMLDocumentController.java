@@ -143,8 +143,7 @@ try{
             try {
            System.out.println("update inventory");
 AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("InventoryForm.fxml"));          
-System.out.println("Add inventory");
-                
+              
                 Stage stage = new Stage();
                 stage.setTitle("Update inventory");
                 stage.setScene(new Scene(root, 450, 450));
@@ -169,6 +168,25 @@ System.out.println("Add inventory");
            System.err.println(e.getMessage());
         }
   
+       orderNow.setOnAction(new EventHandler<ActionEvent>() {
+    public void handle(ActionEvent event) {
+        try {
+           System.out.println("Order Page");
+          Parent root = FXMLLoader.load(getClass().getResource("OrderForm.fxml"));
     
+            Stage stage = new Stage();
+            stage.setTitle("Order Now");
+            stage.setScene(new Scene(root, 450, 450));
+            stage.show();
+            // Hide this current window (if this is what you want)
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+});
+ 
 }
-}
+         
+   }
