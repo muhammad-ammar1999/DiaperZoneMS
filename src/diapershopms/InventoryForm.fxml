@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diapershopms.InventoryFormController">
+ <children> 
+      <javafx.scene.control.TextField fx:id="description" layoutX="289.0" layoutY="193.0" promptText="Description" />
+      <javafx.scene.control.TextField fx:id="qty" layoutX="289.0" layoutY="244.0" promptText="qty" />
+      <javafx.scene.control.TextField layoutX="289.0" layoutY="294.0" promptText="Purchasing_price " />
+      <javafx.scene.control.TextField fx:id="RetailPrice" layoutX="289.0" layoutY="348.0" promptText="Retail_price" />
+      <javafx.scene.control.TextField fx:id="name" layoutX="289.0" layoutY="151.0" promptText="Name" />
+      <javafx.scene.control.TextField fx:id="date" layoutX="289.0" layoutY="392.0" promptText="date" />
+      <javafx.scene.control.TextField fx:id="outletId" layoutX="289.0" layoutY="447.0" promptText="outlet_id" />
+      <Label layoutX="147.0" layoutY="151.0" prefHeight="26.0" prefWidth="98.0" text="Name" />
+      <Label fx:id="Description" layoutX="138.0" layoutY="193.0" prefHeight="26.0" prefWidth="117.0" text="Description" />
+      <Label layoutX="137.0" layoutY="239.0" prefHeight="26.0" prefWidth="49.0" text="Qty" />
+      <Label fx:id="purchasePrice" layoutX="128.0" layoutY="294.0" prefHeight="26.0" prefWidth="116.0" text="Purchasing_price " />
+      <Label layoutX="123.0" layoutY="348.0" prefHeight="26.0" prefWidth="98.0" text="Retail_price" />
+      <Label layoutX="132.0" layoutY="392.0" prefHeight="26.0" prefWidth="80.0" text="Date " />
+      <Label layoutX="132.0" layoutY="452.0" text="Outlet ID" />
+      <Button fx:id="submitInventory" layoutX="587.0" layoutY="556.0" mnemonicParsing="false" text="Submit" />
+
+ </children>   
+</AnchorPane>

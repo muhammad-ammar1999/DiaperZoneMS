@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?> 
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="538.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diapershopms.FXMLDocumentController">
+  <children>
+    <MenuBar prefHeight="29.0" prefWidth="741.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="595.0" prefWidth="772.0" VBox.vgrow="ALWAYS">
+      <children>
+            <AnchorPane layoutX="2.0" prefHeight="509.0" prefWidth="763.0">
+               <children>
+                  <TabPane prefHeight="334.0" prefWidth="763.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Inventory">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="inventoryTable" prefHeight="268.0" prefWidth="763.0">
+                                      <columns>
+                                        <TableColumn fx:id="inventoryID" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="inventoryName" prefWidth="75.0" text="name" />
+                                          <TableColumn fx:id="inventoryDescription" prefWidth="105.0" text="description" />
+                                          <TableColumn fx:id="inventoryQty" prefWidth="40.0" text="qty" />
+                                          <TableColumn fx:id="inventoryPurchasingPrice" prefWidth="135.0" text="purchasing_price" />
+                                          <TableColumn fx:id="inventoryRetailPrice" prefWidth="93.0" text="retail_price" />
+                                          <TableColumn fx:id="inventoryDate" prefWidth="42.0" text="date" />
+                                          <TableColumn fx:id="inventoryOutletId" prefWidth="74.0" text="Outlet_id" />
+                                          <TableColumn fx:id="selectCheckBox" prefWidth="75.0" text="Select" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="addInventory" layoutX="228.0" layoutY="268.0" mnemonicParsing="false" text="Add" />
+                                    <Button fx:id="updateInventory" layoutX="301.0" layoutY="268.0" mnemonicParsing="false" text="Update" />
+                                    <Button fx:id="deleteInventory" layoutX="388.0" layoutY="268.0" mnemonicParsing="false" text="Delete" />
+                                    <Button fx:id="reloadInvenotry" layoutX="463.0" layoutY="268.0" mnemonicParsing="false" text="Refresh" />
+                                    <Button fx:id="orderNow" layoutX="542.0" layoutY="268.0" mnemonicParsing="false" text="OrderNow" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Expense">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="640.0">
+                                 <children>
+                                    <TableView prefHeight="267.0" prefWidth="640.0">
+                                      <columns>
+                                        <TableColumn prefWidth="95.0" text="id" />
+                                        <TableColumn prefWidth="237.0" text="expense_details" />
+                                          <TableColumn prefWidth="97.0" text="price" />
+                                          <TableColumn prefWidth="100.0" text="date" />
+                                          <TableColumn prefWidth="110.0" text="outletid" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="70.0" layoutY="267.0" mnemonicParsing="false" text="Add" />
+                                    <Button layoutX="155.0" layoutY="267.0" mnemonicParsing="false" text="Update" />
+                                    <Button layoutX="239.0" layoutY="267.0" mnemonicParsing="false" text="Delete" />
+                                    <Button layoutX="329.0" layoutY="267.0" mnemonicParsing="false" text="Refresh" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="SalesReport">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="301.0" prefWidth="1034.0">
+                                 <children>
+                                    <TableView prefHeight="274.0" prefWidth="808.0">
+                                      <columns>
+                                        <TableColumn prefWidth="41.0" text="id" />
+                                        <TableColumn prefWidth="47.0" text="date" />
+                                          <TableColumn prefWidth="83.0" text="total_sale" />
+                                          <TableColumn prefWidth="79.0" text="total_purchasing" />
+                                          <TableColumn prefWidth="67.0" text="monthly_expenses" />
+                                          <TableColumn minWidth="0.0" prefWidth="83.0" text="total_expenses" />
+                                          <TableColumn prefWidth="67.0" text="investment" />
+                                          <TableColumn prefWidth="51.0" text="stocks" />
+                                          <TableColumn prefWidth="60.0" text="net_income" />
+                                          <TableColumn prefWidth="60.0" text="profit_ratio" />
+                                          <TableColumn prefWidth="68.0" text="account" />
+                                          <TableColumn prefWidth="56.0" text="outlet_id" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="59.0" layoutY="274.0" mnemonicParsing="false" text="Add" />
+                                    <Button layoutX="180.0" layoutY="274.0" mnemonicParsing="false" text="Update" />
+                                    <Button layoutX="269.0" layoutY="274.0" mnemonicParsing="false" text="Refresh" />
+                                    <Button layoutX="371.0" layoutY="274.0" mnemonicParsing="false" text="Delete" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Outlet">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="268.0" prefWidth="763.0">
+                                      <columns>
+                                        <TableColumn prefWidth="104.0" text="id" />
+                                        <TableColumn prefWidth="118.0" text="name" />
+                                          <TableColumn prefWidth="234.0" text="address" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="27.0" layoutY="268.0" mnemonicParsing="false" text="Add" />
+                                    <Button layoutX="116.0" layoutY="268.0" mnemonicParsing="false" text="Update" />
+                                    <Button layoutX="237.0" layoutY="268.0" mnemonicParsing="false" text="Refresh" />
+                                    <Button layoutX="339.0" layoutY="268.0" mnemonicParsing="false" text="Delete" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Setting">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ChoiceBox layoutX="307.0" layoutY="73.0" prefWidth="150.0" />
+                                    <Label layoutX="169.0" layoutY="65.0" prefHeight="43.0" prefWidth="108.0" text="Outlet Selector" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+      <AnchorPane prefHeight="234.0" prefWidth="772.0" />
+      <AnchorPane prefHeight="0.0" prefWidth="772.0" />
+  </children>
+</VBox>
